@@ -1,0 +1,13 @@
+function yi = interp_nearest(xdata, ydata, xi)
+%% Interpolates by the nearest neighbor method
+% xdata, ydata - known data points
+% xi - points at which we want the interpolated values yi
+% WARNING: no checks is done that xi values are inside xdata range
+
+%% It is crucial to have yi preinitialized !
+% It significantly speeds upthe algorithm,
+% since computer does not have to reallocate memory fro new data points.
+% Try to comment the following line and compare the execution time
+% for a large length of xi
+yi = 0 .* xi;   % A simple shortcut to in
+end
